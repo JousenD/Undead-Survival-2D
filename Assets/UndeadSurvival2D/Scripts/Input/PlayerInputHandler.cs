@@ -11,7 +11,7 @@ namespace JousenD.UndeadSurvival2D.Input
 
         public void OnMove(InputValue value)
         {
-            _inputReader.OnMove(value.Get<Vector2>());
+            _inputReader.OnMoveSO(value.Get<Vector2>());
         }
     }
 }

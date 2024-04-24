@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 namespace JousenD.UndeadSurvival2D.Input
@@ -7,9 +8,11 @@ namespace JousenD.UndeadSurvival2D.Input
     [CreateAssetMenu(fileName = "InputReader", menuName = "Input/Input Reader")]
     public class InputReader : ScriptableObject
     {
-        public void OnMove(Vector2 value)
+        public event UnityAction<Vector2> MoveEvent = delegate { };
+
+        public void OnMoveSO(Vector2 value)
         {
-            Debug.Log("Moving: " + value);
+            MoveEvent.Invoke(value);
         }
     }
 }
