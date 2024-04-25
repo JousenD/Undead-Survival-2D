@@ -6,10 +6,12 @@ namespace JousenD.UndeadSurvival2D.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public float TargetSpeed;
         public Vector2 movementInput;
         public Vector3 movementVector;
 
-        public float targetSpeed = 2f;
+        public float movementBlend;
+
 
         [SerializeField]
         private InputReader _inputReader;
@@ -35,9 +37,17 @@ namespace JousenD.UndeadSurvival2D.Player
 
         private void ComputeMovement()
         {
+            float targetSpeed = TargetSpeed;
+
+            if (movementInput == Vector2.zero)
+            {
+                targetSpeed = 0;
+            }
 
             var move = new Vector3(movementInput.x, movementInput.y, 0);
-            movementVector = targetSpeed * Time.deltaTime * move;
+
+            movementBlend = Mathf.Lerp(movementBlend, targetSpeed, Time.deltaTime * 10f);
+            movementVector = TargetSpeed * Time.deltaTime * move;
         }
 
         private void OnMoveEvent(Vector2 move)

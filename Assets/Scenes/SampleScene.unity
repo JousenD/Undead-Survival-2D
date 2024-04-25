@@ -16555,6 +16555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1719329611}
   - component: {fileID: 1719329612}
+  - component: {fileID: 1719329613}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -16629,6 +16630,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1719329613
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719329610}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9826cc32fac8294a96f56d2f02849e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2013067951
 GameObject:
   m_ObjectHideFlags: 0
@@ -16641,6 +16663,7 @@ GameObject:
   - component: {fileID: 2013067953}
   - component: {fileID: 2013067955}
   - component: {fileID: 2013067954}
+  - component: {fileID: 2013067956}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16676,6 +16699,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56eb031bee0c83489cf52dc717a6c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetSpeed: 2
+  movementInput: {x: 0, y: 0}
+  movementVector: {x: 0, y: 0, z: 0}
+  movementBlend: 0
+  _inputReader: {fileID: 11400000, guid: e1e0e43e3281fc24d93e36f7dfa91183, type: 2}
 --- !u!114 &2013067954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16720,3 +16748,15 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2013067956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013067951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818127f1cce1cba449dde4ae6894fb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
