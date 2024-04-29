@@ -1,6 +1,7 @@
 using UnityEngine;
 using JousenD.UndeadSurvival2d.StateMachine;
 using JousenD.UndeadSurvival2d.StateMachine.Scriptable;
+using JousenD.UndeadSurvival2d.Manager;
 
 [CreateAssetMenu(
     fileName = "FollowPlayerSO",
@@ -15,17 +16,28 @@ public class FollowPlayerSO : StateActionSO
 
 public class FollowPlayer : StateAction
 {
+    public Vector3 PlayerPosition => GameManager.Instance.GetPlayer().transform.position;
+    public Vector3 MyPosition => _myTransform.position;
+
     private Transform _myTransform;
 
     public override void Awake(StateMachineCore stateMachine)
     {
         _myTransform = stateMachine.transform;
     }
-
     public override void OnEnter() { }
     public override void OnExit() { }
     public override void OnUpdate()
     {
-        Debug.Log("Enemy Position: " + _myTransform.position);
+             RunAction();
+    }
+
+    private void RunAction()
+    {
+        _myTransform.position = Vector3.MoveTowards(
+            MyPosition,
+            PlayerPosition,
+            Time.deltaTime
+        );
     }
 }
