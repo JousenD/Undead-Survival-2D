@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42daedde38cb3f47a6352c00bf1b080, type: 3}
   m_Name: SkeletonState1
   m_EditorClassIdentifier: 
+  _actionsSO:
+  - {fileID: 11400000, guid: 1bbf986ea87be6a4fb0dcad7cbb384de, type: 2}
   Name: SkeletonState1
