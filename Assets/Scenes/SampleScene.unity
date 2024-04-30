@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 144912637}
   - component: {fileID: 144912639}
   - component: {fileID: 144912638}
+  - component: {fileID: 144912641}
+  - component: {fileID: 144912640}
   m_Layer: 0
   m_Name: Skeleton Enemy
   m_TagString: Untagged
@@ -184,6 +186,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingLeft: 0
+--- !u!50 &144912640
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144912636}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &144912641
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144912636}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.028297454, y: -0.04193148}
+  m_Size: {x: 0.13819677, y: 0.28967875}
+  m_Direction: 0
 --- !u!1 &347014974
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +234,6 @@ GameObject:
   - component: {fileID: 347014975}
   - component: {fileID: 347014976}
   - component: {fileID: 347014977}
-  - component: {fileID: 347014978}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -291,20 +329,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &347014978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 347014974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40527b64d4a3554ea18787cfa47d47e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _statesSO:
-  - {fileID: 11400000, guid: 2ec3de291c8d40743a0994d3d9887516, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -16891,6 +16915,8 @@ GameObject:
   - component: {fileID: 2013067955}
   - component: {fileID: 2013067954}
   - component: {fileID: 2013067956}
+  - component: {fileID: 2013067957}
+  - component: {fileID: 2013067958}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16906,7 +16932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013067951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 0.72, z: -1}
+  m_LocalPosition: {x: 0.08, y: 0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16988,3 +17014,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingLeft: 0
+--- !u!70 &2013067957
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013067951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.004986629, y: -0.002295792}
+  m_Size: {x: 0.2298908, y: 0.3342303}
+  m_Direction: 0
+--- !u!50 &2013067958
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013067951}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
