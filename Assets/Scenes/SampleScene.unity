@@ -16572,6 +16572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySkeleton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5311175535822941993, guid: 1c0ed2147371ef344b7abdcc576fab66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c0ed2147371ef344b7abdcc576fab66, type: 3}
 --- !u!1001 &1497649016
@@ -16725,6 +16730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemySkeleton (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311175535822941993, guid: 1c0ed2147371ef344b7abdcc576fab66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c0ed2147371ef344b7abdcc576fab66, type: 3}
