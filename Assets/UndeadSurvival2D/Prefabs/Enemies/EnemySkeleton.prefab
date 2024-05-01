@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 6138363427588679130, guid: 4ad698339fcb2fb4d91767594d39e52a,
         type: 3}
       propertyPath: DamageInterval
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad698339fcb2fb4d91767594d39e52a, type: 3}
