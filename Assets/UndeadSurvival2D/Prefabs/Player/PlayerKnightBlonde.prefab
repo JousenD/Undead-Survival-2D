@@ -67,5 +67,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerKnightBlonde
       objectReference: {fileID: 0}
+    - target: {fileID: 2883979714113951597, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: Duration
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883979714113951597, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: flashMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 06b6f529e54e9a947804801102c3d669, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53cc2551851e97642ae50138eea002f0, type: 3}
