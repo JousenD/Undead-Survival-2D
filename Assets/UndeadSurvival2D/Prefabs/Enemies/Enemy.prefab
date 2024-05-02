@@ -221,3 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d97ff35ad517ee40a9e36084809e9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlashDamageColor: {r: 0, g: 0, b: 0, a: 0}
+  ParticleHitEffect: {fileID: 0}
+  _initialHealthSO: {fileID: 11400000, guid: 87e41f9066c68214b9f1243e470fe68c, type: 2}
+  _healthSO: {fileID: 0}
