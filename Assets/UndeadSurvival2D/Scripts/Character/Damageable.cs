@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using JousenD.UndeadSurvival2d.Utils;
+using JousenD.UndeadSurvival2d.Manager;
 
 namespace JousenD.UndeadSurvival2d.Character
 {
@@ -35,16 +36,20 @@ namespace JousenD.UndeadSurvival2d.Character
         void Start()
         {
             _flashDamageEffect = GetComponentInChildren<SpriteFlash>();
+
+            UIManager.Instance.ShowDamage(100, transform);
         }
+
         public void TakeDamage(int damage)
         {
             _healthSO.InflictDamage(damage);
+
+            UIManager.Instance.ShowDamage(damage, transform);
 
             if (ParticleHitEffect != null)
             {
                 ParticleHitEffect.Play();
             }
-
             if (_flashDamageEffect != null)
             {
                 _flashDamageEffect.Flash(FlashDamageColor);
