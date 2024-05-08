@@ -16,17 +16,20 @@ public class MeleeAttackSO : AbilitySO
 
 public class MeleeAttack : Ability
 {
-    public override void Awake(MonoBehaviour runner)
+    public override void Awake(AbilityRunner runner)
     {
         base.Awake(runner);
+        TriggerAbility(runner);
     }
 
-    public override void TriggerAbility()
+    public override void TriggerAbility(AbilityRunner runner)
     {
+        var ability = InstantiateAbility(runner);
     }
 
     public override void Run()
     {
         base.Run();
+        Debug.Log("Casting Melee Attack!");
     }
 }
