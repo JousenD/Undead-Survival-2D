@@ -1,6 +1,8 @@
 using UnityEngine;
 using JousenD.UndeadSurvival2d.Abilities;
 using JousenD.UndeadSurvival2d.Abilities.Scriptable;
+using System;
+
 
 [CreateAssetMenu(
     fileName = "MeleeAttackSO",
@@ -16,6 +18,8 @@ public class MeleeAttackSO : AbilitySO
 
 public class MeleeAttack : Ability
 {
+    private Action ActivateAbility;
+
     public override void Awake(AbilityRunner runner)
     {
         base.Awake(runner);
@@ -24,12 +28,20 @@ public class MeleeAttack : Ability
 
     public override void TriggerAbility(AbilityRunner runner)
     {
-        var ability = InstantiateAbility(runner);
+        var abilityGO = InstantiateAbility(runner);
+        abilityGO.transform.parent = runner.transform;
+
+        ActivateAbility = () => OnAbilityActiovation(abilityGO);
     }
 
     public override void Run()
     {
         base.Run();
-        Debug.Log("Casting Melee Attack!");
+        ActivateAbility();
+    }
+
+    private void OnAbilityActiovation(GameObject abilityGO)
+    {
+        abilityGO.SetActive(true);
     }
 }

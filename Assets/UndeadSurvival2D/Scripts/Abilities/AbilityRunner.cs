@@ -29,6 +29,17 @@ namespace JousenD.UndeadSurvival2d.Abilities
 
         void Update()
         {
+            foreach (var ability in _abilities)
+            {
+                if (ability.IsCooldownPending)
+                {
+                    ability.Cooldown();
+                }
+                else
+                {
+                    ability.Run();
+                }
+            }
         }
 
         private void PrepareAbility(AbilitySO abilitySO)
@@ -37,6 +48,4 @@ namespace JousenD.UndeadSurvival2d.Abilities
             _abilities.Add(ability);
         }
     }
-
-
 }

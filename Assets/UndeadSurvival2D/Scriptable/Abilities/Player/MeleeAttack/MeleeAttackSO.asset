@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91802aa819be3e4fb58076015b84f1c, type: 3}
   m_Name: MeleeAttackSO
   m_EditorClassIdentifier: 
-  AbilityPrefab: {fileID: 2055102311959635369, guid: 413081fc53a78a043b38591243616398,
+  AbilityPrefab: {fileID: 8107946255775915657, guid: dd0817c12d30a4a44ba82cd33fe91db8,
     type: 3}
   Name: MeleeAttack
+  _cooldown: {fileID: 11400000, guid: 477332c4fe1aa764eb81fca48d6418b1, type: 2}
