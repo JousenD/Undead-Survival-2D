@@ -13,6 +13,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e25d898a37a69d446bd3a54b65257543,
         type: 2}
+    - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
+        type: 3}
+      propertyPath: FlashDamageColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
+        type: 3}
+      propertyPath: FlashDamageColor.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
+        type: 3}
+      propertyPath: FlashDamageColor.g
+      value: 0.9585455
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
+        type: 3}
+      propertyPath: FlashDamageColor.r
+      value: 0.8204432
+      objectReference: {fileID: 0}
     - target: {fileID: 6138363427588679128, guid: 4ad698339fcb2fb4d91767594d39e52a,
         type: 3}
       propertyPath: m_RootOrder
@@ -80,3 +100,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad698339fcb2fb4d91767594d39e52a, type: 3}
+--- !u!1 &5311175535755565291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6138363427520778779, guid: 4ad698339fcb2fb4d91767594d39e52a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2061187383815342832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7779149953551914597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311175535755565291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179df05daa415b3458b028864025109d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 0.2
+  flashMaterial: {fileID: 2100000, guid: 06b6f529e54e9a947804801102c3d669, type: 2}

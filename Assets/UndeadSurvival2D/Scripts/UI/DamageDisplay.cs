@@ -13,7 +13,9 @@ namespace JousenD.UndeadSurvival2d.UI
 
         private void Update()
         {
+            //Debug.Log("Target null");
             if (_target == null) { return; }
+            //Debug.Log("Target not null");
 
             float offsetPosY = _target.transform.position.y + 0.1f;
             var offsetPosition = new Vector3(
@@ -29,7 +31,10 @@ namespace JousenD.UndeadSurvival2d.UI
                 null,
                 out Vector2 localPosition
             );
+
             transform.localPosition = localPosition;
+            //transform.localPosition = new Vector2(-20,-20);
+            
         }
 
 

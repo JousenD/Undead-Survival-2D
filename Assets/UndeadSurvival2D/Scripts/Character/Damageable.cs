@@ -36,6 +36,7 @@ namespace JousenD.UndeadSurvival2d.Character
         void Start()
         {
             _flashDamageEffect = GetComponentInChildren<SpriteFlash>();
+
         }
 
         public void TakeDamage(int damage)

@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using JousenD.UndeadSurvival2d.Abilities.Scriptable;
+using JousenD.UndeadSurvival2d.Abilities.Action;
 
 namespace JousenD.UndeadSurvival2d.Abilities
 {
@@ -45,6 +46,9 @@ namespace JousenD.UndeadSurvival2d.Abilities
                 runner.transform.position,
                 Quaternion.identity
             );
+
+            var action = go.GetComponent<AbilityAction>();
+            action.abilitySO = originSO;
 
             return go;
         }

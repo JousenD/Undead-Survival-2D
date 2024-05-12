@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ee01dec88d80ff418f81e0423ffb070, type: 3}
-  m_Name: MeleeAttackCooldownSO
+  m_Script: {fileID: 11500000, guid: c42d3addeef8b2447b65dfc4a7a607fb, type: 3}
+  m_Name: MeleeAttackDamageSO
   m_EditorClassIdentifier: 
-  _initialValue: 0.1
+  _initialValue: 200

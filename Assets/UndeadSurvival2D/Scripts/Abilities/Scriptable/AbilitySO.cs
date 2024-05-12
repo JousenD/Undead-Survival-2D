@@ -4,13 +4,19 @@ namespace JousenD.UndeadSurvival2d.Abilities.Scriptable
 {
     public abstract class AbilitySO : ScriptableObject
     {
-        public GameObject AbilityPrefab;
         public string Name;
+        public GameObject AbilityPrefab;
+        public LayerMask CollideWith;
 
         public float Cooldown => _cooldown.RuntimeValue;
 
+        public int Damage => _damage.RuntimeValue;
+
         [SerializeField]
         private FloatValueSO _cooldown;
+
+        [SerializeField]
+        private IntValueSO _damage;
 
         public virtual Ability GetAbility(AbilityRunner runner)
         {

@@ -21,10 +21,10 @@ namespace JousenD.UndeadSurvival2d.Manager
                 Destroy(gameObject);
             }
         }
-
+        
+        
         public void ShowDamage(int damage, Transform target)
         {
-            Instantiate(DamageTextPrefab, DamageCanvas.transform);
             var damageGO = Instantiate(DamageTextPrefab, DamageCanvas.transform);
             var damageDisplay = damageGO.GetComponent<DamageDisplay>();
 

@@ -17,5 +17,10 @@ namespace JousenD.UndeadSurvival2d.Character
         {
             isFacingLeft = _sprite.flipX = !_sprite.flipX;
         }
+
+        public bool GetFlipX()
+        {
+            return _sprite.flipX;
+        }
     }
 }
