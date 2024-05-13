@@ -45,8 +45,6 @@ namespace JousenD.UndeadSurvival2d.Abilities.Action
             {
                 if (collision.TryGetComponent<Damageable>(out var damageable))
                 {
-                    Debug.Log("TargetPos: "+ damageable.transform.position);
-                    Debug.Log("PlayerPos" + this.transform.position);
                     damageable.TakeDamage(abilitySO.Damage);
                 }
             }
