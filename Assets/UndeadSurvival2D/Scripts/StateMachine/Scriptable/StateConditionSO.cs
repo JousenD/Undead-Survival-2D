@@ -2,7 +2,17 @@ using UnityEngine;
 
 namespace JousenD.UndeadSurvival2d.StateMachine.Scriptable
 {
-    public class StateConditionSO : ScriptableObject
+     public abstract class StateConditionSO : ScriptableObject
     {
+        public StateCondition GetCondition(StateMachineCore stateMachine)
+        {
+            var condition = CreateCondition(stateMachine);
+            condition.originSO = this;
+            condition.Awake(stateMachine);
+            return condition;
+        }
+
+        public abstract StateCondition CreateCondition(StateMachineCore stateMachine);
+
     }
 }
