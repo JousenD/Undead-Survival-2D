@@ -9,7 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c42d3addeef8b2447b65dfc4a7a607fb, type: 3}
-  m_Name: InitialSkeletonHealthSO
+  m_Script: {fileID: 11500000, guid: a42daedde38cb3f47a6352c00bf1b080, type: 3}
+  m_Name: SkeletonState2
   m_EditorClassIdentifier: 
-  _initialValue: 30
+  _actionsSO:
+  - {fileID: 11400000, guid: 533390e58ea687049a6c6bbcdcce596a, type: 2}
+  _conditionsSO: []
+  Name: SkeletonState2

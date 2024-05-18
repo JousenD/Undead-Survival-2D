@@ -7,11 +7,16 @@ namespace JousenD.UndeadSurvival2d.StateMachine
     {
         public StateSO originSO;
         public StateAction[] actions;
+        public StateCondition[] conditions;
+
         public string Name => originSO.Name;
 
         public void OnEnter()
         {
-            Debug.Log(Name + " was Entered");
+            for (var i = 0; i < actions.Length; i++)
+            {
+                actions[i].OnEnter();
+            }
         }
 
         public void OnExit()
@@ -24,6 +29,24 @@ namespace JousenD.UndeadSurvival2d.StateMachine
             {
                 actions[i].OnUpdate();
             }
+        }
+
+        public bool CanTransition()
+        {
+            bool isMet = false;
+
+            for (var i = 0; i < conditions.Length; i++)
+            {
+                var condition = conditions[i];
+                isMet = condition.IsMet();
+
+                if (!isMet)
+                {
+                    break;
+                }
+            }
+
+            return isMet;
         }
 
     }

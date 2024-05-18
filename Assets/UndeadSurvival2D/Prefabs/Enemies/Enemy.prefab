@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _statesSO:
   - {fileID: 11400000, guid: 2ec3de291c8d40743a0994d3d9887516, type: 2}
+  - {fileID: 11400000, guid: 9f8dae753dda2464582d0c9a0eb0d9c4, type: 2}
 --- !u!70 &6138363427588678692
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

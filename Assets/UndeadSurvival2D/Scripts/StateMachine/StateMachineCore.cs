@@ -6,6 +6,8 @@ namespace JousenD.UndeadSurvival2d.StateMachine
 {
     public class StateMachineCore : MonoBehaviour
     {
+        public State CurrentState => _states[_currentState];
+
         [SerializeField]
         private StateSO[] _statesSO;
         private State[] _states;
@@ -21,7 +23,24 @@ namespace JousenD.UndeadSurvival2d.StateMachine
         void Update()
         {
             var currentState = _states[_currentState];
-            currentState.OnUpdate();
+            CurrentState.OnUpdate();
+
+            if (CurrentState.CanTransition() && _currentState + 1 != _states.Length)
+            {
+                Transition();
+            }
+        }
+
+        private void Transition()
+        {
+            CurrentState.OnExit();
+            GoToNextState();
+        }
+
+        private void GoToNextState()
+        {
+            _currentState++;
+            CurrentState.OnEnter();
         }
 
         private void InitialStates()

@@ -11,6 +11,11 @@ namespace JousenD.UndeadSurvival2d.Character
         public ParticleSystem ParticleHitEffect;
         public bool IsDead => _healthSO.CurrentHealth <= 0;
 
+        public int Health => _healthSO.CurrentHealth;
+        public int MaxHealth => _healthSO.MaxHealth;
+
+        public float HealthPercentage => (float)Health / (float)MaxHealth * 100f;
+
         [SerializeField]
         private IntValueSO _initialHealthSO;
 
@@ -19,8 +24,6 @@ namespace JousenD.UndeadSurvival2d.Character
         private HealthSO _healthSO;
 
         private SpriteFlash _flashDamageEffect;
-        private Animator _animator;
-        private int _deadAnimationId;
 
         
         private void Awake()
@@ -38,8 +41,6 @@ namespace JousenD.UndeadSurvival2d.Character
         // Use this for initialization
         void Start()
         {
-            _animator = GetComponentInChildren<Animator>();
-            _deadAnimationId = Animator.StringToHash("Dead");
             _flashDamageEffect = GetComponentInChildren<SpriteFlash>();
         }
 
@@ -47,13 +48,7 @@ namespace JousenD.UndeadSurvival2d.Character
         {
             if (IsDead)
             {
-                Debug.Log("I am death! Leave me alone! (:");
                 return;
-            }
-
-            if (_healthSO.CurrentHealth - damage <= 0)
-            {
-                _animator.SetTrigger(_deadAnimationId);
             }
 
             _healthSO.InflictDamage(damage);
