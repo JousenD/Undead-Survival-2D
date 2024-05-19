@@ -2,11 +2,14 @@ using UnityEngine;
 using System.Collections;
 using JousenD.UndeadSurvival2D.Player;
 using JousenD.UndeadSurvival2d.Character;
+using JousenD.UndeadSurvival2d.Reward;
 
 namespace JousenD.UndeadSurvival2d.Player
 {
     public class PlayerBehaviour : CharacterBehaviour
     {
+        public float CoinDetectionRange;
+
         private PlayerController _playerController;
         private Animator _animator;
 
@@ -20,6 +23,8 @@ namespace JousenD.UndeadSurvival2d.Player
         // Update is called once per frame
         void Update()
         {
+            TargetNearbyItems();
+
             if (_playerController.movementInput.x < 0 && !isFacingLeft ||
                 _playerController.movementInput.x > 0 && isFacingLeft)
             {
@@ -28,6 +33,19 @@ namespace JousenD.UndeadSurvival2d.Player
 
             var speed = Mathf.Round(_playerController.movementBlend * 100f) / 100f;
             _animator.SetFloat("Speed", speed);
+        }
+
+        private void TargetNearbyItems()
+        {
+            Collider2D[] items = Physics2D.OverlapCircleAll(transform.position, CoinDetectionRange);
+
+            foreach (Collider2D collider in items)
+            {
+                if (collider.TryGetComponent(out RewardBehaviour item) && !item.isTargeted)
+                {
+                    item.isTargeted = true;
+                }
+            }
         }
     }
 }

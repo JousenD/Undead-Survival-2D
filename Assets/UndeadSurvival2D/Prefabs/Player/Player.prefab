@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 1920894932351057156}
   - component: {fileID: 7977555849275234115}
   - component: {fileID: 3839460547224109819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -497,6 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingLeft: 0
+  CoinDetectionRange: 1
 --- !u!70 &1920894932351057159
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
