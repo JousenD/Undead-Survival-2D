@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 6138363427588678692}
   - component: {fileID: 6138363427588678693}
   - component: {fileID: 6059821294053683752}
+  - component: {fileID: 4877923196821765531}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -226,3 +227,18 @@ MonoBehaviour:
   ParticleHitEffect: {fileID: 0}
   _initialHealthSO: {fileID: 11400000, guid: 87e41f9066c68214b9f1243e470fe68c, type: 2}
   _healthSO: {fileID: 0}
+--- !u!114 &4877923196821765531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138363427588679129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80406742eb1a6654a85bbd22421a1526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Loot:
+    reward: {fileID: 11400000, guid: e84e20ba82dc97b43bdc23f76ffd019b, type: 2}
+    dropChance: 100

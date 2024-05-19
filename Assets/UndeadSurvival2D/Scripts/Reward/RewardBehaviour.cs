@@ -1,8 +1,17 @@
 using UnityEngine;
+using System;
 using JousenD.UndeadSurvival2d.Manager;
+using JousenD.UndeadSurvival2d.Reward.Scriptable;
+
 
 namespace JousenD.UndeadSurvival2d.Reward
 {
+    [Serializable]
+        public struct Loot
+        {
+        public RewardSO reward;
+        public float dropChance;
+        }
     public class RewardBehaviour : MonoBehaviour
     {
         public LayerMask InteractWith;
