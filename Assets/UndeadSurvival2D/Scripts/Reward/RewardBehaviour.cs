@@ -12,10 +12,13 @@ namespace JousenD.UndeadSurvival2d.Reward
         public RewardSO reward;
         public float dropChance;
         }
+
     public class RewardBehaviour : MonoBehaviour
     {
         public LayerMask InteractWith;
         public bool isTargeted;
+        public RewardSO rewardData;
+
 
 
         private void Update()
@@ -37,6 +40,7 @@ namespace JousenD.UndeadSurvival2d.Reward
             if ((InteractWith.value & 1 << collision.gameObject.layer) > 0)
             {
                 Destroy(gameObject);
+                rewardData.Apply(GameManager.Instance.GetPlayer());
             }
         }
     }

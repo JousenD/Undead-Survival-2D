@@ -1,4 +1,5 @@
 using JousenD.UndeadSurvival2d.Reward;
+using TMPro;
 using UnityEngine;
 
 namespace JousenD.UndeadSurvival2d.Character
@@ -13,8 +14,13 @@ namespace JousenD.UndeadSurvival2d.Character
 
             if (roll <= Loot.dropChance)
             {
+                var boolLoot = roll <= Loot.dropChance;
                 Loot.reward.Drop(this);
             }
         }
+
+        // private void Start() {
+        //     DropLoot();    
+        // }
     }
 }

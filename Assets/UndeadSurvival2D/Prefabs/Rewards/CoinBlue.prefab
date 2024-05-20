@@ -127,3 +127,5 @@ MonoBehaviour:
   InteractWith:
     serializedVersion: 2
     m_Bits: 128
+  isTargeted: 0
+  rewardData: {fileID: 11400000, guid: e84e20ba82dc97b43bdc23f76ffd019b, type: 2}

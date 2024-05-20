@@ -9,7 +9,6 @@ namespace JousenD.UndeadSurvival2d.StateMachine.Scriptable
             var condition = CreateCondition(stateMachine);
             condition.originSO = this;
             condition.Awake(stateMachine);
-            Debug.Log("Getting Condition!");
             return condition;
         }
 

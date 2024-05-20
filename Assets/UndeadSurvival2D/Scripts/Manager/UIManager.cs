@@ -1,5 +1,7 @@
 using JousenD.UndeadSurvival2d.UI;
 using UnityEngine;
+using TMPro;
+
 
 namespace JousenD.UndeadSurvival2d.Manager
 {
@@ -9,6 +11,16 @@ namespace JousenD.UndeadSurvival2d.Manager
 
         public RectTransform DamageCanvas;
         public GameObject DamageTextPrefab;
+        public TextMeshProUGUI LevelText;
+        public TextMeshProUGUI TimerText;
+
+
+
+        [SerializeField]
+        private ExperienceBar _expBar;
+
+        [SerializeField]
+        private IntValueSO _levelSO;
 
         private void Awake()
         {
@@ -20,6 +32,16 @@ namespace JousenD.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+        }
+
+        private void Update()
+        {
+            LevelText.text = $"lvl: {_levelSO.RuntimeValue}";
+        }
+
+        public void SetExperience(int exp, int maxExp)
+        {
+            _expBar.SetValue(exp, maxExp);
         }
         
         

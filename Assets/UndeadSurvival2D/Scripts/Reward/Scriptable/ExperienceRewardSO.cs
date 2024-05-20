@@ -1,4 +1,5 @@
 using UnityEngine;
+using JousenD.UndeadSurvival2d.Player;
 
 namespace JousenD.UndeadSurvival2d.Reward.Scriptable
 {
@@ -9,5 +10,10 @@ namespace JousenD.UndeadSurvival2d.Reward.Scriptable
     public class ExperienceRewardSO : RewardSO
     {
         public int experience;
+
+        public override void Apply(PlayerBehaviour player)
+        {
+            player.SetExperience(experience);
+        }
     }
 }

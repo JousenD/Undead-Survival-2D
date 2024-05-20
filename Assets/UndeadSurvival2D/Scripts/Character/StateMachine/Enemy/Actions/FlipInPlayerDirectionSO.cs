@@ -34,7 +34,6 @@ public class FlipInPlayerDirection : StateAction
 
     public override void OnUpdate()
     {
-        Debug.Log("Updating Fliping!");
         Flip(MyPosition.x - PlayerPosition.x > 0);
     }
 
