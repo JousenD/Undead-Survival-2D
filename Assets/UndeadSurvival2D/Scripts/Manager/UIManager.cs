@@ -1,6 +1,7 @@
 using JousenD.UndeadSurvival2d.UI;
 using UnityEngine;
 using TMPro;
+using JousenD.UndeadSurvival2d.Persistance.Scriptable;
 
 
 namespace JousenD.UndeadSurvival2d.Manager
@@ -8,6 +9,18 @@ namespace JousenD.UndeadSurvival2d.Manager
     public class UIManager : MonoBehaviour
     {
         public static UIManager Instance { get; private set; }
+
+        public string NiceTime
+        {
+            get
+            {
+                var gameTime = _gameStateSO.GameTime;
+                int minutes = Mathf.FloorToInt(gameTime / 60f);
+                int seconds = Mathf.FloorToInt(gameTime - minutes * 60);
+                string niceTime = string.Format("{0:00}:{1:00}", minutes, seconds);
+                return niceTime;
+            }
+        }
 
         public RectTransform DamageCanvas;
         public GameObject DamageTextPrefab;
@@ -18,6 +31,10 @@ namespace JousenD.UndeadSurvival2d.Manager
 
         [SerializeField]
         private ExperienceBar _expBar;
+
+        [SerializeField]
+        private GameStateSO _gameStateSO;
+
 
         [SerializeField]
         private IntValueSO _levelSO;
@@ -37,6 +54,8 @@ namespace JousenD.UndeadSurvival2d.Manager
         private void Update()
         {
             LevelText.text = $"lvl: {_levelSO.RuntimeValue}";
+            TimerText.text = NiceTime;
+
         }
 
         public void SetExperience(int exp, int maxExp)

@@ -16779,6 +16779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 2013067956}
+  _gameStateSO: {fileID: 11400000, guid: 711d3d7f542456d4e9b785b22b2d8d7e, type: 2}
 --- !u!4 &565183621
 Transform:
   m_ObjectHideFlags: 0
@@ -18249,6 +18250,7 @@ MonoBehaviour:
   LevelText: {fileID: 284149928}
   TimerText: {fileID: 1901489771}
   _expBar: {fileID: 1381180869}
+  _gameStateSO: {fileID: 11400000, guid: 711d3d7f542456d4e9b785b22b2d8d7e, type: 2}
   _levelSO: {fileID: 11400000, guid: 9d9220564f636dc4cbe98034d7b85c48, type: 2}
 --- !u!4 &1685405165
 Transform:

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using JousenD.UndeadSurvival2d.Player;
+using JousenD.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace JousenD.UndeadSurvival2d.Manager
 {
@@ -9,6 +10,9 @@ namespace JousenD.UndeadSurvival2d.Manager
 
         [SerializeField]
         private PlayerBehaviour _player;
+
+        [SerializeField]
+        private GameStateSO _gameStateSO;
 
         private void Awake()
         {
@@ -20,6 +24,13 @@ namespace JousenD.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+
+            _gameStateSO.Reset();
+        }
+
+        private void Update()
+        {
+            _gameStateSO.GameTime += Time.deltaTime;
         }
 
         public PlayerBehaviour GetPlayer()
