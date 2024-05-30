@@ -14,8 +14,7 @@ namespace JousenD.UndeadSurvival2d.Abilities
 
         public bool IsCooldownPending => currentCooldown != 0;
 
-        public abstract void TriggerAbility(AbilityRunner runner);
-
+        public abstract void TriggerAbility();
         public virtual void Awake(AbilityRunner runner) { }
         public virtual void Run()
         {
@@ -39,13 +38,9 @@ namespace JousenD.UndeadSurvival2d.Abilities
             }
         }
 
-        protected virtual GameObject InstantiateAbility(AbilityRunner runner)
+        protected virtual GameObject InstantiateAbility()
         {
-            var go = Object.Instantiate(
-                originSO.AbilityPrefab,
-                runner.transform.position,
-                Quaternion.identity
-            );
+            var go = Object.Instantiate(originSO.AbilityPrefab);
 
             var action = go.GetComponent<AbilityAction>();
             action.abilitySO = originSO;

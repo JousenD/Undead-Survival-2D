@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c0938b49537bb48825e98aa81ee782, type: 3}
+  m_Name: LightBoltAbilitySO
+  m_EditorClassIdentifier: 
+  Name: Lightbolt
+  AbilityPrefab: {fileID: 2055102311959635369, guid: 413081fc53a78a043b38591243616398,
+    type: 3}
+  CollideWith:
+    serializedVersion: 2
+    m_Bits: 64
+  _cooldown: {fileID: 11400000, guid: d6e5b645c5dca6041b00f24534459f8d, type: 2}
+  _damage: {fileID: 11400000, guid: a9e9cb07236e54e42bcc781176d972d2, type: 2}
