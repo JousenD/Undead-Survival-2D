@@ -2,6 +2,7 @@ using UnityEngine;
 using JousenD.UndeadSurvival2d.Abilities;
 using JousenD.UndeadSurvival2d.Abilities.Scriptable;
 using System;
+using JousenD.UndeadSurvival2d.Abilities.Action;
 
 
 [CreateAssetMenu(
@@ -31,7 +32,7 @@ public class MeleeAttack : Ability
 
     public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility();
+        var abilityGO = InstantiateAbility(out AbilityAction action);
         abilityGO.transform.parent = _source;
         abilityGO.transform.localPosition = Vector3.zero;
 
