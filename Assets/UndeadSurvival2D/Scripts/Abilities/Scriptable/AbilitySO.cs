@@ -7,6 +7,8 @@ namespace JousenD.UndeadSurvival2d.Abilities.Scriptable
         public string Name;
         public GameObject AbilityPrefab;
         public LayerMask CollideWith;
+        public ActionModifierSO[] ActionModifiers;
+
 
         public float Cooldown => _cooldown.RuntimeValue;
 

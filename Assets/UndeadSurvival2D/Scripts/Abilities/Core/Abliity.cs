@@ -11,6 +11,8 @@ namespace JousenD.UndeadSurvival2d.Abilities
 
         public float overallCooldown;
         public float currentCooldown;
+        public ActionModifierSO[] ActionModifiers => originSO.ActionModifiers;
+
 
         public bool IsCooldownPending => currentCooldown != 0;
 
