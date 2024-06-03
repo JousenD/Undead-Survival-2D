@@ -9,8 +9,9 @@ namespace JousenD.UndeadSurvival2d.Abilities.Action
     public class AbilityAction : MonoBehaviour
     {
         public AbilitySO abilitySO;
-        
         public Vector3 direction;
+        public float range;
+        public float currentDistance;
 
 
 
@@ -51,6 +52,11 @@ namespace JousenD.UndeadSurvival2d.Abilities.Action
         public void OnAbilityDeActivation()
         {
             _collider.enabled = false;
+        }
+
+        public void DestroyAction()
+        {
+            Destroy(gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
