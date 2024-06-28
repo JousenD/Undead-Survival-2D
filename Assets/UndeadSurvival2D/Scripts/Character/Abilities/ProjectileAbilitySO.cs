@@ -17,7 +17,7 @@ public class ProjectileAbilitySO : AbilitySO
     }
 }
 
-public class ProjectileAbility : Ability
+public class ProjectileAbility : Ability<CollisionAction>
 {
     public ProjectileAbilitySO OriginSO => (ProjectileAbilitySO)originSO;
 
@@ -32,7 +32,7 @@ public class ProjectileAbility : Ability
 
     public override void TriggerAbility()
     {
-        var abilityGO = InstantiateAbility(out AbilityAction action);
+        var abilityGO = InstantiateAbility(out CollisionAction action);
         abilityGO.transform.position = _source.position;
 
         action.range = OriginSO.Range;
