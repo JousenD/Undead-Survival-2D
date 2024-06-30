@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6573783196739982852}
   - component: {fileID: 2866183992420357503}
   - component: {fileID: 6159545642603142784}
-  - component: {fileID: 4026140838461504975}
+  - component: {fileID: 1421038743645279536}
   m_Layer: 0
   m_Name: MeleeAttack
   m_TagString: Untagged
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0.56999993, y: 0.27829388}
   serializedVersion: 2
   m_Radius: 1.7847522
---- !u!114 &4026140838461504975
+--- !u!114 &1421038743645279536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,9 +133,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8107946255775915657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a68be3e7ba8984b80e4d06bb44bb1e, type: 3}
+  m_Script: {fileID: 11500000, guid: a757d23fb8dbb2b4cb902bad9e291f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollideWith:
-    serializedVersion: 2
-    m_Bits: 64
+  abilitySO: {fileID: 0}
+  direction: {x: 0, y: 0, z: 0}
+  range: 0
+  currentDistance: 0
