@@ -18290,8 +18290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2284034eccf93714db880cb71afda3b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameStage: 0
   _spawnConfigSO: {fileID: 11400000, guid: e75008d307618b64bba303dbcb87cda1, type: 2}
+  _gameStateSO: {fileID: 11400000, guid: 711d3d7f542456d4e9b785b22b2d8d7e, type: 2}
 --- !u!4 &1540044041
 Transform:
   m_ObjectHideFlags: 0

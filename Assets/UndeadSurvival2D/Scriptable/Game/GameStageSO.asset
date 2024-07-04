@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68d0e707f8f400469daff040e3b9d3a, type: 3}
-  m_Name: GameStateSO
+  m_Script: {fileID: 11500000, guid: c42d3addeef8b2447b65dfc4a7a607fb, type: 3}
+  m_Name: GameStageSO
   m_EditorClassIdentifier: 
-  _gameTimeSO: {fileID: 11400000, guid: 83e6a505d1904114bb80ad8fec0beea8, type: 2}
-  _gameStageSO: {fileID: 11400000, guid: fdab5db0eca775c4fb903419c24fee4c, type: 2}
+  _initialValue: 0
