@@ -11,6 +11,8 @@ namespace JousenD.UndeadSurvival2d.Enemy
 
         private Damageable _closeTarget;
         private float _damageTimer;
+        public int CollisionDamage;
+
 
         new void Start()
         {
@@ -26,7 +28,7 @@ namespace JousenD.UndeadSurvival2d.Enemy
 
                 if (_damageTimer >= DamageInterval)
                 {
-                    _closeTarget.TakeDamage(10);
+                    _closeTarget.TakeDamage(CollisionDamage);
                     _damageTimer = 0;
                 }
             }
