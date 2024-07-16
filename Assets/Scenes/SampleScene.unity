@@ -16780,6 +16780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 2013067956}
   _gameStateSO: {fileID: 11400000, guid: 711d3d7f542456d4e9b785b22b2d8d7e, type: 2}
+  _playerDeadEvent: {fileID: 11400000, guid: d61905e1a4f10ce4786045765d914fc4, type: 2}
 --- !u!4 &565183621
 Transform:
   m_ObjectHideFlags: 0

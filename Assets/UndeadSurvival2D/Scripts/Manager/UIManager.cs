@@ -2,6 +2,8 @@ using JousenD.UndeadSurvival2d.UI;
 using UnityEngine;
 using TMPro;
 using JousenD.UndeadSurvival2d.Persistance.Scriptable;
+using System.Threading.Tasks;
+
 
 
 namespace JousenD.UndeadSurvival2d.Manager
@@ -70,6 +72,17 @@ namespace JousenD.UndeadSurvival2d.Manager
             var damageDisplay = damageGO.GetComponent<DamageDisplay>();
 
             damageDisplay.ShowDamage(damage, target, DamageCanvas);
+        }
+
+        public async Task DisplayLooseScreen()
+        {
+            var progress = 0f;
+
+            while (progress <= 0.5f)
+            {
+                progress += 0.01f;
+                await Task.Delay(10);
+            }
         }
     }
 }

@@ -498,6 +498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingLeft: 0
   CoinDetectionRange: 1
+  ExperienceToLevel: 0
+  _levelSO: {fileID: 0}
+  _currentExperienceSO: {fileID: 0}
 --- !u!70 &1920894932351057159
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -551,6 +554,7 @@ MonoBehaviour:
   ParticleHitEffect: {fileID: 0}
   _initialHealthSO: {fileID: 11400000, guid: 201fbadc53ccb1c4d9cf452bdcae7b2d, type: 2}
   _healthSO: {fileID: 11400000, guid: f66bf66540391704ea0404c5b0a8bb17, type: 2}
+  _playerDeadEvent: {fileID: 11400000, guid: d61905e1a4f10ce4786045765d914fc4, type: 2}
 --- !u!114 &3839460547224109819
 MonoBehaviour:
   m_ObjectHideFlags: 0
