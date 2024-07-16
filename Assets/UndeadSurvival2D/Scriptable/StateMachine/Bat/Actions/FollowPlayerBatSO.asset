@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88f55669b552624c94d5d790353866b, type: 3}
   m_Name: FollowPlayerBatSO
   m_EditorClassIdentifier: 
-  SpeedModifier: 1.3
+  SpeedModifier: 1.4
   DistanceToKeep: 0

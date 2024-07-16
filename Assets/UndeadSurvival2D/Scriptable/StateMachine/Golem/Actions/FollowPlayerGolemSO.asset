@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5af79d065538f54e81a1e4a2d2bebb4, type: 3}
-  m_Name: SpawnableEnemySO
+  m_Script: {fileID: 11500000, guid: a88f55669b552624c94d5d790353866b, type: 3}
+  m_Name: FollowPlayerGolemSO
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 5311175535822941994, guid: 1c0ed2147371ef344b7abdcc576fab66, type: 3}
+  SpeedModifier: 0.7
+  DistanceToKeep: 0

@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a42daedde38cb3f47a6352c00bf1b080, type: 3}
-  m_Name: BatState2
+  m_Script: {fileID: 11500000, guid: c5af79d065538f54e81a1e4a2d2bebb4, type: 3}
+  m_Name: SpawnableSkeletonSO
   m_EditorClassIdentifier: 
-  _actionsSO:
-  - {fileID: 11400000, guid: ce5371a4352fa8943ac7b0953bd41efd, type: 2}
-  - {fileID: 11400000, guid: 1b829c97c36045447b777daf5af406cf, type: 2}
-  _conditionsSO: []
-  Name: BatState2
+  Prefab: {fileID: 5311175535822941994, guid: 1c0ed2147371ef344b7abdcc576fab66, type: 3}

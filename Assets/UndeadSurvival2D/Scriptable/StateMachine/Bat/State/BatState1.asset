@@ -17,4 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: efd76fb3a798d00498e37dec73a393d0, type: 2}
   _conditionsSO:
   - {fileID: 11400000, guid: 371349f8ef9cb654ea0e47f6c86f21c0, type: 2}
-  Name: SkeletonState1
+  Name: BatState1
