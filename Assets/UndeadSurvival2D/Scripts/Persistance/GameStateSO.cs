@@ -11,6 +11,15 @@ namespace JousenD.UndeadSurvival2d.Persistance.Scriptable
         [SerializeField]
         private IntValueSO _gameStageSO;
 
+        [SerializeField]
+        private BoolValueSO _isGameOverSO;
+
+        public bool IsGameOver
+        {
+            get => _isGameOverSO.RuntimeValue;
+            set => _isGameOverSO.RuntimeValue = value;
+        }
+
         public float GameTime
         {
             get => _gameTimeSO.RuntimeValue;
@@ -26,6 +35,9 @@ namespace JousenD.UndeadSurvival2d.Persistance.Scriptable
         public override void Reset()
         {
             _gameTimeSO.ResetValue();
+            _gameStageSO.ResetValue();
+            _isGameOverSO.ResetValue();
+
         }
     }
 }

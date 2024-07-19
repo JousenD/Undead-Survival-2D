@@ -3,6 +3,8 @@ using UnityEngine;
 using TMPro;
 using JousenD.UndeadSurvival2d.Persistance.Scriptable;
 using System.Threading.Tasks;
+using UnityEngine.UI;
+
 
 
 
@@ -28,6 +30,8 @@ namespace JousenD.UndeadSurvival2d.Manager
         public GameObject DamageTextPrefab;
         public TextMeshProUGUI LevelText;
         public TextMeshProUGUI TimerText;
+        public Image DeathOverlay;
+        public Button QuitButton;
 
 
 
@@ -81,8 +85,18 @@ namespace JousenD.UndeadSurvival2d.Manager
             while (progress <= 0.5f)
             {
                 progress += 0.01f;
+
+                DeathOverlay.color = new Color(
+                    DeathOverlay.color.r,
+                    DeathOverlay.color.g,
+                    DeathOverlay.color.b,
+                    progress
+                );
+
                 await Task.Delay(10);
             }
+
+            QuitButton.gameObject.SetActive(true);
         }
     }
 }

@@ -4,6 +4,7 @@ using JousenD.UndeadSurvival2D.Player;
 using JousenD.UndeadSurvival2d.Character;
 using JousenD.UndeadSurvival2d.Reward;
 using JousenD.UndeadSurvival2d.Manager;
+using JousenD.UndeadSurvival2d.Persistance.Scriptable;
 
 namespace JousenD.UndeadSurvival2d.Player
 {
@@ -33,6 +34,9 @@ namespace JousenD.UndeadSurvival2d.Player
         [SerializeField]
         private IntValueSO _currentExperienceSO;
 
+        [SerializeField]
+        private GameStateSO _gameStateSO;
+
         void Awake()
         {
             _levelSO.ResetValue();
@@ -52,6 +56,11 @@ namespace JousenD.UndeadSurvival2d.Player
         // Update is called once per frame
         void Update()
         {
+            if(_gameStateSO.IsGameOver)
+            {
+                return;
+            }
+            
             TargetNearbyItems();
 
             if (_playerController.movementInput.x < 0 && !isFacingLeft ||

@@ -57,11 +57,21 @@ namespace JousenD.UndeadSurvival2d.Manager
             return _player.transform.position;
         }
 
+        public void PauseGame()
+        {
+            Time.timeScale = 0;
+        }
+
+        public void ResumeGame()
+        {
+            Time.timeScale = 1;
+        }
+
         private async void HandleLooseCase()
         {
+            _gameStateSO.IsGameOver = true;
             await UIManager.Instance.DisplayLooseScreen();
-            Debug.Log("Display buttons and so on...");
-            Debug.Log("Game is Lost!");
+            PauseGame();
         }
     }
 }

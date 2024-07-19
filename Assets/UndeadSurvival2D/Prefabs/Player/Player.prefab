@@ -499,8 +499,10 @@ MonoBehaviour:
   isFacingLeft: 0
   CoinDetectionRange: 1
   ExperienceToLevel: 0
-  _levelSO: {fileID: 0}
-  _currentExperienceSO: {fileID: 0}
+  _levelSO: {fileID: 11400000, guid: 9d9220564f636dc4cbe98034d7b85c48, type: 2}
+  _currentExperienceSO: {fileID: 11400000, guid: 24f35cf985219fe42893e66504e11464,
+    type: 2}
+  _gameStateSO: {fileID: 11400000, guid: 711d3d7f542456d4e9b785b22b2d8d7e, type: 2}
 --- !u!70 &1920894932351057159
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
