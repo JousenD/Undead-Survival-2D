@@ -1,4 +1,6 @@
 using UnityEngine;
+using JousenD.UndeadSurvival2d.Persistance.Scriptable;
+
 
 namespace JousenD.UndeadSurvival2d.Manager
 {
@@ -7,6 +9,9 @@ namespace JousenD.UndeadSurvival2d.Manager
         public static MenuManager Instance { get; private set; }
 
         public GameObject InitialOpen;
+
+        [SerializeField]
+        private GameOptionsSO _gameOptionsSO;
 
         private GameObject _openMenu;
 
@@ -48,6 +53,11 @@ namespace JousenD.UndeadSurvival2d.Manager
 
             _openMenu.SetActive(false);
             _openMenu = null;
+        }
+
+         public void SelectHero(GameObject hero)
+        {
+            _gameOptionsSO.heroChoice = hero;
         }
     }
 }
