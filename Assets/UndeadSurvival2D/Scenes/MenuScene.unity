@@ -425,7 +425,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 249371327}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1023402234}
+        m_TargetAssemblyTypeName: JousenD.UndeadSurvival2d.Manager.MenuManager, Assembly-CSharp
+        m_MethodName: SelectHero
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7787186804238537519, guid: 7517701dff5852c43bc62395504981aa,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &249371327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,7 +862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &473037905
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1790,7 +1803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hero 2
+  m_text: Knight Armored
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c824d3993ac618e45bd8d4f0aebc8716, type: 2}
   m_sharedMaterial: {fileID: -6204498948397829005, guid: c824d3993ac618e45bd8d4f0aebc8716,
@@ -1818,8 +1831,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2180,9 +2193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hero 1
-
-'
+  m_text: Knight Blonde
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c824d3993ac618e45bd8d4f0aebc8716, type: 2}
   m_sharedMaterial: {fileID: -6204498948397829005, guid: c824d3993ac618e45bd8d4f0aebc8716,
@@ -2210,8 +2221,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

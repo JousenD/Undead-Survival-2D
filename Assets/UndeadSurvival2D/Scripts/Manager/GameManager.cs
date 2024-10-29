@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using JousenD.UndeadSurvival2d.Player;
 using JousenD.UndeadSurvival2d.Persistance.Scriptable;
+using JousenD.UndeadSurvival2d.Camera;
+
 
 namespace JousenD.UndeadSurvival2d.Manager
 {
@@ -13,6 +15,9 @@ namespace JousenD.UndeadSurvival2d.Manager
 
         [SerializeField]
         private GameStateSO _gameStateSO;
+
+        [SerializeField]
+        private GameOptionsSO _gameOptionsSO;
 
         [Header("Listening")]
         [SerializeField]
@@ -38,6 +43,13 @@ namespace JousenD.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+
+            var playerPrefab = _gameOptionsSO.heroChoice;
+            var camera = UnityEngine.Camera.main.GetComponent<FollowCamera>();
+            var playerGO = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity);
+
+            camera.FollowTo = playerGO.transform;
+            _player = playerGO.GetComponent<PlayerBehaviour>();
 
             _gameStateSO.Reset();
         }

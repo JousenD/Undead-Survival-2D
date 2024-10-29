@@ -1,5 +1,6 @@
 using UnityEngine;
 using JousenD.UndeadSurvival2d.Persistance.Scriptable;
+using UnityEngine.SceneManagement;
 
 
 namespace JousenD.UndeadSurvival2d.Manager
@@ -58,6 +59,8 @@ namespace JousenD.UndeadSurvival2d.Manager
          public void SelectHero(GameObject hero)
         {
             _gameOptionsSO.heroChoice = hero;
+            SceneManager.LoadScene("GameScene");
+
         }
     }
 }

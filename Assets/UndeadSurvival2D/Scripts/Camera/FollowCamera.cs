@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JousenD.UndeadSurvival2D.Camera
+namespace JousenD.UndeadSurvival2d.Camera
 {
     public class FollowCamera : MonoBehaviour
     {
