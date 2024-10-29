@@ -62,20 +62,77 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1920894932351057158, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: ExperienceToLevel
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920894932351057158, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: CoinDetectionRange
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1920894932351057181, guid: 53cc2551851e97642ae50138eea002f0,
         type: 3}
       propertyPath: m_Name
       value: PlayerKnightBlonde
       objectReference: {fileID: 0}
-    - target: {fileID: 2883979714113951597, guid: 53cc2551851e97642ae50138eea002f0,
+    - target: {fileID: 2530459149796675223, guid: 53cc2551851e97642ae50138eea002f0,
         type: 3}
-      propertyPath: Duration
-      value: 0.3
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2883979714113951597, guid: 53cc2551851e97642ae50138eea002f0,
+    - target: {fileID: 2530459149796675223, guid: 53cc2551851e97642ae50138eea002f0,
         type: 3}
-      propertyPath: flashMaterial
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839460547224109819, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839460547224109819, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 06b6f529e54e9a947804801102c3d669, type: 2}
+      objectReference: {fileID: 11400000, guid: daac72ca37ddf2f438823a1523f3d14f,
+        type: 2}
+    - target: {fileID: 6232050281816070664, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977555849275234115, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: ParticleHitEffect
+      value: 
+      objectReference: {fileID: 1010832959235595567}
+    - target: {fileID: 7977555849275234115, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: FlashDamageColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977555849275234115, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: FlashDamageColor.b
+      value: 0.042452812
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977555849275234115, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: FlashDamageColor.g
+      value: 0.042452812
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977555849275234115, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: FlashDamageColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53cc2551851e97642ae50138eea002f0, type: 3}
+--- !u!198 &1010832959235595567 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 665555464248107163, guid: 53cc2551851e97642ae50138eea002f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 521208178385010100}
+  m_PrefabAsset: {fileID: 0}
