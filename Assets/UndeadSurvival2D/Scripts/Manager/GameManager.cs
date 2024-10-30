@@ -2,6 +2,8 @@
 using JousenD.UndeadSurvival2d.Player;
 using JousenD.UndeadSurvival2d.Persistance.Scriptable;
 using JousenD.UndeadSurvival2d.Camera;
+using UnityEngine.SceneManagement;
+
 
 
 namespace JousenD.UndeadSurvival2d.Manager
@@ -9,6 +11,8 @@ namespace JousenD.UndeadSurvival2d.Manager
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { get; private set; }
+
+        public GameObject FallbackPlayerPrefab;
 
         [SerializeField]
         private PlayerBehaviour _player;
@@ -44,7 +48,10 @@ namespace JousenD.UndeadSurvival2d.Manager
                 Destroy(gameObject);
             }
 
-            var playerPrefab = _gameOptionsSO.heroChoice;
+            var playerPrefab = _gameOptionsSO.heroChoice == null ?
+                FallbackPlayerPrefab :
+                _gameOptionsSO.heroChoice;
+
             var camera = UnityEngine.Camera.main.GetComponent<FollowCamera>();
             var playerGO = Instantiate(playerPrefab, Vector2.zero, Quaternion.identity);
 
@@ -77,6 +84,12 @@ namespace JousenD.UndeadSurvival2d.Manager
         public void ResumeGame()
         {
             Time.timeScale = 1;
+        }
+
+        public void GoToMenu()
+        {
+            SceneManager.LoadScene("MenuScene");
+            ResumeGame();
         }
 
         private async void HandleLooseCase()

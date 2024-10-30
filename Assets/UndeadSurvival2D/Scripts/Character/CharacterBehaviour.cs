@@ -15,12 +15,28 @@ namespace JousenD.UndeadSurvival2d.Character
 
         public void Flip()
         {
-            isFacingLeft = _sprite.flipX = !_sprite.flipX;
+            var scale = _sprite.transform.parent.localScale;
+            _sprite.transform.parent.localScale = new Vector3(-scale.x, scale.y, scale.z);
+            isFacingLeft = !isFacingLeft;
         }
 
         public bool GetFlipX()
         {
             return _sprite.flipX;
+        }
+
+        public int GetPlayerDirection()
+        {
+            if (_sprite.transform.localScale.x >= 0)
+            {
+                // Right
+                return +1;
+            }
+            else
+            {
+                // Left
+                return -1;
+            }
         }
     }
 }
