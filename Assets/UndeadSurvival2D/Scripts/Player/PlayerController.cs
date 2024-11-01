@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using JousenD.UndeadSurvival2D.Input;
+using JousenD.UndeadSurvival2d.Abilities;
+
 
 namespace JousenD.UndeadSurvival2D.Player
 {
@@ -15,13 +17,23 @@ namespace JousenD.UndeadSurvival2D.Player
 
         [SerializeField]
         private InputReader _inputReader;
+        private AbilityRunner _abilityRunner;
         private void OnEnable()
         {
             _inputReader.MoveEvent += OnMoveEvent;
+            _inputReader.EvadeEvent += OnEvadeEvent;
+
         }
         private void OnDisable()
         {
             _inputReader.MoveEvent -= OnMoveEvent;
+            _inputReader.EvadeEvent -= OnEvadeEvent;
+
+        }
+
+        private void Start()
+        {
+            _abilityRunner = GetComponent<AbilityRunner>();
         }
         // Update is called once per frame
         void Update()
@@ -53,6 +65,28 @@ namespace JousenD.UndeadSurvival2D.Player
         private void OnMoveEvent(Vector2 move)
         {
             movementInput = move;
+        }
+
+        private void OnEvadeEvent(bool isEvading)
+        {
+            if (isEvading)
+            {
+                AbilityStatus status = _abilityRunner.GetAbility("Evade", out var ability);
+
+                if (status == AbilityStatus.IsReady)
+                {
+                    Debug.Log("Ability Casted!");
+                    ability.Run();
+                }
+                else if (status == AbilityStatus.IsOnCooldown)
+                {
+                    Debug.Log($"{ability.originSO.Name} is on cooldown");
+                }
+                else
+                {
+                    Debug.Log("Ability is not found");
+                }
+            }
         }
     }
 }

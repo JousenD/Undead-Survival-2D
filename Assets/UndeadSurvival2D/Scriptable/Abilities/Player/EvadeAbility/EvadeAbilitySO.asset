@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a285031921601d4eb3183c7dc0af329, type: 3}
+  m_Name: EvadeAbilitySO
+  m_EditorClassIdentifier: 
+  Name: Evade
+  AbilityPrefab: {fileID: 0}
+  CollideWith:
+    serializedVersion: 2
+    m_Bits: 0
+  DestroyOnCollision: 0
+  ExecutionType: 1
+  ActionModifiers: []
+  _cooldown: {fileID: 11400000, guid: 8dbd7697f0d3f2b42a4741f882857615, type: 2}
+  _damage: {fileID: 0}
+  AnimationParameter: Evade

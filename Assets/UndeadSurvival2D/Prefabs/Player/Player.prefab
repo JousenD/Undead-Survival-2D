@@ -571,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _abilitiesSO:
   - {fileID: 11400000, guid: ed4c3ca925dc5604699dd459c2ff1e9c, type: 2}
+  - {fileID: 11400000, guid: c034520a5ca400e44adef08399c4f774, type: 2}
 --- !u!1 &2064640916357535451
 GameObject:
   m_ObjectHideFlags: 0

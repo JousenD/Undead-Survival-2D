@@ -13,5 +13,10 @@ namespace JousenD.UndeadSurvival2D.Input
         {
             _inputReader.OnMoveSO(value.Get<Vector2>());
         }
+
+        public void OnEvade(InputValue value)
+        {
+            _inputReader.OnEvade(value.isPressed);
+        }
     }
 }

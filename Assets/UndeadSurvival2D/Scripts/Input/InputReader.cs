@@ -9,10 +9,17 @@ namespace JousenD.UndeadSurvival2D.Input
     public class InputReader : ScriptableObject
     {
         public event UnityAction<Vector2> MoveEvent = delegate { };
+        public event UnityAction<bool> EvadeEvent = delegate { };
+
 
         public void OnMoveSO(Vector2 value)
         {
             MoveEvent.Invoke(value);
+        }
+
+        public void OnEvade(bool value)
+        {
+            EvadeEvent.Invoke(value);
         }
     }
 }

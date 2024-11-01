@@ -128,6 +128,23 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3839460547224109819, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839460547224109819, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: daac72ca37ddf2f438823a1523f3d14f,
+        type: 2}
+    - target: {fileID: 3839460547224109819, guid: 53cc2551851e97642ae50138eea002f0,
+        type: 3}
+      propertyPath: _abilitiesSO.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: c034520a5ca400e44adef08399c4f774,
+        type: 2}
     - target: {fileID: 6356101602313351952, guid: 53cc2551851e97642ae50138eea002f0,
         type: 3}
       propertyPath: m_Pivot.x
