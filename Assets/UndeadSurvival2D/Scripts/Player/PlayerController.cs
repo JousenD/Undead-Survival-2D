@@ -13,6 +13,8 @@ namespace JousenD.UndeadSurvival2D.Player
         public Vector3 movementVector;
 
         public float movementBlend;
+        public float SpeedModifier = 1f;
+
 
 
         [SerializeField]
@@ -49,7 +51,7 @@ namespace JousenD.UndeadSurvival2D.Player
 
         private void ComputeMovement()
         {
-            float targetSpeed = TargetSpeed;
+            float targetSpeed = TargetSpeed * SpeedModifier;
 
             if (movementInput == Vector2.zero)
             {
@@ -59,7 +61,7 @@ namespace JousenD.UndeadSurvival2D.Player
             var move = new Vector3(movementInput.x, movementInput.y, 0);
 
             movementBlend = Mathf.Lerp(movementBlend, targetSpeed, Time.deltaTime * 10f);
-            movementVector = TargetSpeed * Time.deltaTime * move;
+            movementVector = targetSpeed * Time.deltaTime * move;
         }
 
         private void OnMoveEvent(Vector2 move)
@@ -75,7 +77,7 @@ namespace JousenD.UndeadSurvival2D.Player
 
                 if (status == AbilityStatus.IsReady)
                 {
-                    Debug.Log("Ability Casted!");
+                    SpeedModifier = 3f;
                     ability.Run();
                 }
                 else if (status == AbilityStatus.IsOnCooldown)

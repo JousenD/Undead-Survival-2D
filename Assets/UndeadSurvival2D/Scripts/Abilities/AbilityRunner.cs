@@ -27,11 +27,6 @@ namespace JousenD.UndeadSurvival2d.Abilities
             {
                 PrepareAbility(abilitySO);
             }
-
-            foreach (var ability in _abilities)
-            {
-                ability.Run();
-            }
         }
 
         void Update()
