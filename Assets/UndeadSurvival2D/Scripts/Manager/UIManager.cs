@@ -4,9 +4,7 @@ using TMPro;
 using JousenD.UndeadSurvival2d.Persistance.Scriptable;
 using System.Threading.Tasks;
 using UnityEngine.UI;
-
-
-
+using JousenD.UndeadSurvival2d.Abilities;
 
 namespace JousenD.UndeadSurvival2d.Manager
 {
@@ -32,6 +30,10 @@ namespace JousenD.UndeadSurvival2d.Manager
         public TextMeshProUGUI TimerText;
         public Image DeathOverlay;
         public Button QuitButton;
+        public AbilityIcon ActiveAbility;
+        public HealthBar HealthBar;
+
+
 
 
 
@@ -45,6 +47,20 @@ namespace JousenD.UndeadSurvival2d.Manager
         [SerializeField]
         private IntValueSO _levelSO;
 
+        [Header("Listening")]
+        [SerializeField]
+        private AbilityEventChannelSO _abilityAddEvent;
+
+        private void OnEnable()
+        {
+            _abilityAddEvent.OnEventRaised += OnAbilityAdded;
+        }
+
+        private void OnDisable()
+        {
+            _abilityAddEvent.OnEventRaised -= OnAbilityAdded;
+        }
+
         private void Awake()
         {
             if (Instance == null)
@@ -55,6 +71,9 @@ namespace JousenD.UndeadSurvival2d.Manager
             {
                 Destroy(gameObject);
             }
+
+            HealthBar.followTo = GameManager.Instance.GetPlayer().transform;
+
         }
 
         private void Update()
@@ -97,6 +116,18 @@ namespace JousenD.UndeadSurvival2d.Manager
             }
 
             QuitButton.gameObject.SetActive(true);
+        }
+
+        private void OnAbilityAdded(Ability ability)
+        {
+            if (ability.originSO.ExecutionType == Abilities.Scriptable.AbilityExecutionType.Trigger)
+            {
+                ActiveAbility.InitIcon(
+                    ability.originSO.AbilityIcon,
+                    () => ability.overallCooldown,
+                    () => ability.currentCooldown
+                );
+            }
         }
     }
 }
