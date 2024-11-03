@@ -4,7 +4,7 @@ using JousenD.UndeadSurvival2D.Input;
 using JousenD.UndeadSurvival2d.Abilities;
 
 
-namespace JousenD.UndeadSurvival2D.Player
+namespace JousenD.UndeadSurvival2d.Player
 {
     public class PlayerController : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace JousenD.UndeadSurvival2D.Player
         public Vector3 movementVector;
 
         public float movementBlend;
-        public float SpeedModifier = 1f;
+        public float speedModifier;
 
 
 
@@ -36,6 +36,8 @@ namespace JousenD.UndeadSurvival2D.Player
         private void Start()
         {
             _abilityRunner = GetComponent<AbilityRunner>();
+            speedModifier = 1f;
+
         }
         // Update is called once per frame
         void Update()
@@ -51,7 +53,7 @@ namespace JousenD.UndeadSurvival2D.Player
 
         private void ComputeMovement()
         {
-            float targetSpeed = TargetSpeed * SpeedModifier;
+            float targetSpeed = TargetSpeed * speedModifier;
 
             if (movementInput == Vector2.zero)
             {
@@ -77,7 +79,6 @@ namespace JousenD.UndeadSurvival2D.Player
 
                 if (status == AbilityStatus.IsReady)
                 {
-                    SpeedModifier = 3f;
                     ability.Run();
                 }
                 else if (status == AbilityStatus.IsOnCooldown)

@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using JousenD.UndeadSurvival2D.Player;
+using JousenD.UndeadSurvival2d.Player;
 using JousenD.UndeadSurvival2d.Character;
 using JousenD.UndeadSurvival2d.Reward;
 using JousenD.UndeadSurvival2d.Manager;
