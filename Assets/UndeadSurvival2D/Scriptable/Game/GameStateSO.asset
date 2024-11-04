@@ -15,3 +15,5 @@ MonoBehaviour:
   _gameTimeSO: {fileID: 11400000, guid: 83e6a505d1904114bb80ad8fec0beea8, type: 2}
   _gameStageSO: {fileID: 11400000, guid: fdab5db0eca775c4fb903419c24fee4c, type: 2}
   _isGameOverSO: {fileID: 11400000, guid: 975a6677a943459479f9200f3eff9254, type: 2}
+  _enemiesDefeatedSO: {fileID: 11400000, guid: 83a368ce29036264ab2f108f05db3223, type: 2}
+  _scoreSO: {fileID: 11400000, guid: 02e2777e704c37f438598b263c38952e, type: 2}

@@ -13,6 +13,11 @@ namespace JousenD.UndeadSurvival2d.UI
 
         private void Start()
         {
+            // enabled = false;
+        }
+
+        private void Awake()
+        {
             enabled = false;
         }
 

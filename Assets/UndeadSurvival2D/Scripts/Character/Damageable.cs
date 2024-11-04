@@ -2,6 +2,8 @@
 using System.Collections;
 using JousenD.UndeadSurvival2d.Utils;
 using JousenD.UndeadSurvival2d.Manager;
+using JousenD.UndeadSurvival2d.Persistance.Scriptable;
+
 
 namespace JousenD.UndeadSurvival2d.Character
 {
@@ -15,6 +17,11 @@ namespace JousenD.UndeadSurvival2d.Character
         public int MaxHealth => _healthSO.MaxHealth;
 
         public float HealthPercentage => (float)Health / (float)MaxHealth * 100f;
+
+        public int Score;
+
+        [SerializeField]
+        private GameStateSO _gameStateSO;
 
         [SerializeField]
         private IntValueSO _initialHealthSO;
@@ -60,6 +67,15 @@ namespace JousenD.UndeadSurvival2d.Character
                 if (_playerDeadEvent != null)
                 {
                     _playerDeadEvent.RaiseEvent();
+                }
+
+                if (Score > 0)
+                {
+                    _gameStateSO.EnemiesDefeated++;
+                    _gameStateSO.Score += Score;
+
+                    Debug.Log("Enemies Defeated: " + _gameStateSO.EnemiesDefeated);
+                    Debug.Log("Score: " + _gameStateSO.Score);
                 }
             }
 

@@ -32,6 +32,8 @@ namespace JousenD.UndeadSurvival2d.Manager
         public Button QuitButton;
         public AbilityIcon ActiveAbility;
         public HealthBar HealthBar;
+        public Image ScoreScreen;
+
 
 
 
@@ -116,6 +118,8 @@ namespace JousenD.UndeadSurvival2d.Manager
             }
 
             QuitButton.gameObject.SetActive(true);
+            ScoreScreen.gameObject.SetActive(true);
+
         }
 
         private void OnAbilityAdded(Ability ability)

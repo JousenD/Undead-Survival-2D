@@ -9,6 +9,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
         type: 3}
+      propertyPath: Score
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
+        type: 3}
+      propertyPath: _gameStateSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 711d3d7f542456d4e9b785b22b2d8d7e,
+        type: 2}
+    - target: {fileID: 6059821294053683752, guid: 4ad698339fcb2fb4d91767594d39e52a,
+        type: 3}
       propertyPath: _initialHealthSO
       value: 
       objectReference: {fileID: 11400000, guid: e25d898a37a69d446bd3a54b65257543,
