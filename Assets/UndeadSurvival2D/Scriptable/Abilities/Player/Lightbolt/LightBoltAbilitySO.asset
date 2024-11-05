@@ -15,12 +15,16 @@ MonoBehaviour:
   Name: Lightbolt
   AbilityPrefab: {fileID: 442241635845407120, guid: 40bc02f6eeb6cfa43a640d467d0eb86c,
     type: 3}
+  AbilityIcon: {fileID: 0}
+  SoundEffect: {fileID: 8300000, guid: 5e8a5a28bdbae1d4d8e13d7257fabda3, type: 3}
   CollideWith:
     serializedVersion: 2
     m_Bits: 64
   DestroyOnCollision: 1
+  ExecutionType: 0
   ActionModifiers:
   - {fileID: 11400000, guid: 143fc1da24da25844ae97aebe8bdfe29, type: 2}
+  - {fileID: 11400000, guid: 71f0b5c95221a404fb4251e0dc3da649, type: 2}
   _cooldown: {fileID: 11400000, guid: d6e5b645c5dca6041b00f24534459f8d, type: 2}
   _damage: {fileID: 11400000, guid: a9e9cb07236e54e42bcc781176d972d2, type: 2}
   Range: 3

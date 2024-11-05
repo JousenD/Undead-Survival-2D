@@ -12,6 +12,8 @@ namespace JousenD.UndeadSurvival2d.Abilities.Scriptable
         public string Name;
         public GameObject AbilityPrefab;
         public Sprite AbilityIcon;
+        public AudioClip SoundEffect;
+
         public LayerMask CollideWith;
         public bool DestroyOnCollision;
         public AbilityExecutionType ExecutionType;

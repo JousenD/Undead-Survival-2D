@@ -19,6 +19,7 @@ namespace JousenD.UndeadSurvival2d.Abilities
         public bool IsCooldownPending => currentCooldown != 0;
 
         public abstract void TriggerAbility();
+        
         public virtual void Awake(AbilityRunner runner) { }
         public virtual void Run()
         {
@@ -64,6 +65,20 @@ namespace JousenD.UndeadSurvival2d.Abilities
             }
             
             action.abilitySO = originSO;
+
+            if (originSO.SoundEffect != null)
+            {
+                if (go.TryGetComponent(out AudioSource audioSource))
+                {
+                    action.audioSource = audioSource;
+                }
+                else
+                {
+                    action.audioSource = go.AddComponent<AudioSource>();
+                }
+
+                action.audioSource.clip = originSO.SoundEffect;
+            }
 
             return go;
         }

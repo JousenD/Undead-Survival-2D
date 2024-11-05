@@ -16,10 +16,9 @@ public class MoveToRandomPositionSO : ActionModifierSO
 
 public class MoveToRandomPosition : ActionModifier
 {
-    public override void Awake(AbilityAction action)
-    {
+    public override void Awake(AbilityAction action) { }
+    public override void OnEnter(AbilityAction action) { }
 
-    }
 
     public override void Update(AbilityAction action)
     {
